@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets API Example</title>
+</head>
+
+<body>
+    <h1>Google Sheets API Example</h1>
+
+    <!-- Include the Google API Client Library -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+    <script>
+        function initClient() {
+            // Assuming you have already loaded the Google API client library
+            gapi.client.init({
+                apiKey: null,  // No API key for service account
+                discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
+            }).then(function () {
+                // Use service account credentials explicitly
+                gapi.auth.authorize({
+                    'client_id': '107920697268597958501',  // Replace with your client ID
+                    'scope': 'https://www.googleapis.com/auth/spreadsheets',
+                    'immediate': false
+                }, function (authResult) {
+                    console.log(authResult);
+                    if (authResult && !authResult.error) {
+                        // Call the Google Sheets API using service account credentials
+                        gapi.client.sheets.spreadsheets.values.get({
+                            spreadsheetId: '10qRn3I9GdzEIiCuwhJgo2JAOQScZZHRc',
+                            range: 'Progress', // Replace with your sheet name or range
+                        }).then(function (response) {
+                            var values = response.result.values;
+                            // Process the data as needed
+                            console.log(values);
+                        }).catch(function (error) {
+                            console.error('Error calling Google Sheets API:', error);
+                        });
+                    } else {
+                        console.error('Error authorizing with service account:', authResult.error);
+                    }
+                });
+            }).catch(function (error) {
+                console.error('Error initializing the Google Sheets API:', error);
+            });
+
+        }
+
+        // Load the Google API client and the Sheets API
+        gapi.load('client', initClient);
+    </script>
+
+    <!-- Add a button to trigger the API call (optional) -->
+    <button onclick="initClient()">Get Spreadsheet Data</button>
+</body>
+
+</html>
