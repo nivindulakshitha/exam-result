@@ -18,17 +18,14 @@
   // Assuming you have already loaded the Google API client library
   gapi.client.init({
     apiKey: null,
-    clientId: '919283499456-q0t98tkue813rh80jev0em0jk8k2t3ae.apps.googleusercontent.com',  // Updated with your client ID
     discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
   }).then(function () {
     // Use OAuth 2.0 client credentials
     gapi.auth2.authorize({
       apiKey: null,
   clientId: '919283499456-q0t98tkue813rh80jev0em0jk8k2t3ae.apps.googleusercontent.com',
-  discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
   scope: 'https://www.googleapis.com/auth/spreadsheets',
-  // Make sure this matches the origin where your app is hosted
-  javascript_origins: ['https://codingdesk-dev.github.io']
+  javascript_origins: ['https://codingdesk-dev.github.io'],
       immediate: false
     }, function (authResult) {
       console.log(authResult);
