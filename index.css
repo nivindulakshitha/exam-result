@@ -1,0 +1,133 @@
+@keyframes growProgressBarExamResult {
+  0%,
+  33% {
+    --ERPercentage: 0;
+  }
+  100% {
+    --ERPercentage: var(--examMarks);
+  }
+}
+
+@property --ERPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"]#exam-result {
+  --size: 5rem;
+  --fg: #1c64f2;
+  --bg: #def;
+  --ERPercentage: var(--examMarks);
+  animation: growProgressBarExamResult 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      white 80%,
+      transparent 0 100%,
+      white 0
+    ),
+    conic-gradient(var(--fg) calc(var(--ERPercentage) * 1%), var(--bg) 0);
+  font-family: "unMalithi", Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar"]#exam-result::before {
+  counter-reset: percentage var(--examMarks);
+  content: counter(percentage) "%";
+}
+
+@keyframes growProgressBarOverallMarks {
+  0%,
+  33% {
+    --ORPercentage: 0;
+  }
+  100% {
+    --ORPercentage: var(--overallMarks);
+  }
+}
+
+@property --ORPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"]#overall-result {
+  --size: 5rem;
+  --fg: #1c64f2;
+  --bg: #def;
+  --ORPercentage: var(--overallMarks);
+  animation: growProgressBarOverallMarks 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      white 80%,
+      transparent 0 100%,
+      white 0
+    ),
+    conic-gradient(var(--fg) calc(var(--ORPercentage) * 1%), var(--bg) 0);
+  font-family: "unMalithi", Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar"]#overall-result::before {
+  counter-reset: percentage var(--overallMarks);
+  content: counter(percentage) "%";
+}
+
+.cover {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  overflow: auto;
+  align-content: center;
+}
+
+@media (max-width: 1300px) {
+  .cover {
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
+    align-content: flex-start;
+    padding-top: 2em;
+  }
+}
+
+body > div > div > section {
+  flex-direction: row;
+}
+
+@media (max-width: 550px) {
+  body > div > div > section {
+    flex-direction: column;
+    gap: 2em;
+  }
+}
+
+body > div > div > div {
+  flex-direction: row;
+}
+
+@media (max-width: 350px) {
+  body > div > div > div {
+    flex-direction: column;
+  }
+
+  body > div > div > div input {
+    min-width: 100%;
+  }
+
+  body > div > div > div button {
+    align-self: center;
+  }
+}
