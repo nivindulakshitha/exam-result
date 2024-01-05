@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="si" translate="no">
+<html>
 
 <head>
     <meta charset="UTF-8" />
@@ -112,7 +112,8 @@
                     <img id="congrats-image" class="absolute scale-150" style="visibility: hidden;"
                         src="https://img1.picmix.com/output/stamp/normal/7/8/0/7/2107087_30c32.gif" alt="">
                     <span id="candidate-position" style="color: #1c64f2;">00</span><span class="text-base block">වන
-                        ස්ථානය <span class="block text-4xl mt-2" id="send-stars" style="color: #fff;">text</span></span>
+                        ස්ථානය <span class="block text-4xl mt-2" id="scored-place"
+                            style="color: #fff;">text</span></span>
                 </p>
             </section>
         </div>
@@ -184,19 +185,19 @@
                 document.getElementById("candidate-position").innerText = position < 10 ? '0' + position : '' + position;
                 if (position == 1) {
                     document.getElementById("candidate-position").classList.add('congratulations');
-                    document.getElementById("send-stars").innerText = "🥇";
+                    document.getElementById("scored-place").innerText = "🥇";
                     document.getElementById("congrats-image").style.visibility = "visible";
                 } else if (position == 2) {
                     document.getElementById("candidate-position").classList.add('congratulations');
-                    document.getElementById("send-stars").innerText = "🥈";
+                    document.getElementById("scored-place").innerText = "🥈";
                     document.getElementById("congrats-image").style.visibility = "visible";
                 } else if (position == 3) {
                     document.getElementById("candidate-position").classList.add('congratulations');
-                    document.getElementById("send-stars").innerText = "🥉";
+                    document.getElementById("scored-place").innerText = "🥉";
                     document.getElementById("congrats-image").style.visibility = "visible";
                 } else {
                     document.getElementById("candidate-position").classList.remove('congratulations');
-                    document.getElementById("send-stars").innerText = "🙄";
+                    document.getElementById("scored-place").innerText = "😏";
                     document.getElementById("congrats-image").style.visibility = "hidden";
                 }
 
@@ -207,8 +208,8 @@
             document.getElementById("candidate-position").innerText = "00";
             document.getElementById("candidate-name").style.color = "#F22B29";
             document.getElementById("candidate-position").classList.remove('congratulations');
-            document.getElementById("send-stars").style.color = "#FFF";
-            document.getElementById("send-stars").innerText = "text";
+            document.getElementById("scored-place").style.color = "#FFF";
+            document.getElementById("scored-place").innerText = "text";
             document.getElementById("congrats-image").style.visibility = "hidden";
             document.getElementById('exam-result').style.setProperty('--examMarks', 0);
             document.querySelector('div[role="progressbar"]#exam-result').style.background = `radial-gradient(closest-side, white 80%, transparent 0 100%, white 0), conic-gradient(#1c64f2 0%, #def 0)`;
