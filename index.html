@@ -15,7 +15,7 @@
     <meta property="og:title" content="අධ්‍යන ප්‍රගති සංවර්ධන වැඩසටහන | ශ්‍රී සුමංගල දහම් පාසල">
     <meta property="og:description"
         content="කුරුණෑගල පිඹුරුවැල්ලේගම ශ්‍රී සුමංගල තපෝවනාරාම විහාරස්ථ ශ්‍රී සුමංගල දහම් පාසල විසින් පවත්වනු ලබන පෙරහුරු විභාග සහ ශ්‍රේණි විභාග ප්‍රතිඵල නිකුත් කිර්‍රීමේ වෙබ් අඩවිය">
-    <meta property="og:image" content="Resources/paper.ico">
+    <meta property="og:image" content="Resources/Daham Pasala Logo.png">
     <meta property="og:url" content="https://codingdesk-dev.github.io/exam-result/">
     <meta property="og:type" content="website">
 
@@ -77,23 +77,24 @@
         </div>
         <div class="flex flex-col justify-start justify-items-start items-start content-start w-full p-10">
             <p class="text-base">පරීක්ෂණ අංකය</p>
-            <select id="examinations"
-                class="bg-gray-50 border tracking-wide border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-1.5 mt-2"></select>
+            <select id="examinations" style="color: #1c64f2;"
+                class="bg-gray-50 border tracking-widest border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-1.5 mt-2"></select>
             <p class="text-base mt-4 mb-4">විභාග අංකය</p>
             <div class="w-full flex gap-5">
-                <input type="text" id="exam-index"
-                    class="w-2/4 border border-gray-300 text-gray-900 text-center text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block p-1.5 py-1.5" />
+                <input type="number" id="exam-index" style="color: #1c64f2;" inputmode="numeric" pattern="[0-9]*"
+                    min="230601" max="231040"
+                    class="w-2/4 tracking-widest border border-gray-300 text-gray-900 text-center text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block p-1.5 py-1.5" />
                 <button type="button" id="session-start"
                     onclick="findIndex(document.getElementById('exam-index').value);"
                     class="w-2/4 text-white bg-[#1c64f2] hover:bg-[#1446a9]/90 min-w-[120px] font-medium rounded-lg whitespace-nowrap text-sm px-3 py-1.5 text-center inline-flex items-center justify-center transition duration-300">
                     තහවුරු කරන්න
                 </button>
             </div>
-            <p class="text-base mt-4">මුලකුරු සමග නම</p>
+            <p class="text-base mt-4">අපේක්ෂකයාගේ නම</p>
             <span id="candidate-name" class="text-sm font-normal text-left mt-2"
-                style="font-family: 'unMalithi'; line-height: 1">
+                style="font-family: 'unMalithi'; line-height: 1; color: #fff;">text
             </span>
-            <section class="w-full flex items-center place-content-around mt-8">
+            <section class="w-full flex items-center place-content-around mt-6">
                 <div class="flex flex-col items-center">
                     <div role="progressbar" id="exam-result" aria-valuemin="0" aria-valuemax="100"
                         style="--examMarks:0">
@@ -107,9 +108,12 @@
                     <span class="text-base block mt-2">සාමාන්‍ය ලකුණු</span>
                 </div>
 
-                <p class="text-5xl font-black block text-center"><span id="candidate-position">00</span><span
-                        class="text-base block">වන
-                        ස්ථානය <span class="block" id="send-stars"></span></span></p>
+                <p class="text-5xl font-black block text-center relative">
+                    <img id="congrats-image" class="absolute scale-150" style="visibility: hidden;"
+                        src="https://img1.picmix.com/output/stamp/normal/7/8/0/7/2107087_30c32.gif" alt="">
+                    <span id="candidate-position" style="color: #1c64f2;">00</span><span class="text-base block">වන
+                        ස්ථානය <span class="block text-4xl mt-2" id="send-stars" style="color: #fff;">text</span></span>
+                </p>
             </section>
         </div>
     </div>
@@ -146,6 +150,7 @@
         for (var x = 2; x < 202; x++) {
             let examIndex = jsonData[x][1];
             if (examIndex != null && examIndex == enteredIndex) {
+                document.getElementById("candidate-name").style.color = "#1c64f2";
                 document.getElementById("candidate-name").innerText = jsonData[x][3];
                 var result = jsonData[x][document.querySelector("#examinations").selectedOptions[0].id];
                 var overall = jsonData[x][58];
@@ -178,15 +183,37 @@
 
                 document.getElementById("candidate-position").innerText = position < 10 ? '0' + position : '' + position;
                 if (position == 1) {
-                    document.getElementById("send-stars").innerText = "⭐⭐⭐";
+                    document.getElementById("candidate-position").classList.add('congratulations');
+                    document.getElementById("send-stars").innerText = "🥇";
+                    document.getElementById("congrats-image").style.visibility = "visible";
                 } else if (position == 2) {
-                    document.getElementById("send-stars").innerText = "⭐⭐";
+                    document.getElementById("candidate-position").classList.add('congratulations');
+                    document.getElementById("send-stars").innerText = "🥈";
+                    document.getElementById("congrats-image").style.visibility = "visible";
                 } else if (position == 3) {
-                    document.getElementById("send-stars").innerText = "⭐";
+                    document.getElementById("candidate-position").classList.add('congratulations');
+                    document.getElementById("send-stars").innerText = "🥉";
+                    document.getElementById("congrats-image").style.visibility = "visible";
                 } else {
-                    document.getElementById("send-stars").innerText = "";
+                    document.getElementById("candidate-position").classList.remove('congratulations');
+                    document.getElementById("send-stars").innerText = "🙄";
+                    document.getElementById("congrats-image").style.visibility = "hidden";
                 }
+
+                return;
             }
+
+            document.getElementById("candidate-name").innerText = "ඇතුලත් කළ විභාග අංකය වැරදියි. නැවත පරීක්ෂා කර උත්සාහ කරන්න.";
+            document.getElementById("candidate-position").innerText = "00";
+            document.getElementById("candidate-name").style.color = "#F22B29";
+            document.getElementById("candidate-position").classList.remove('congratulations');
+            document.getElementById("send-stars").style.color = "#FFF";
+            document.getElementById("send-stars").innerText = "text";
+            document.getElementById("congrats-image").style.visibility = "hidden";
+            document.getElementById('exam-result').style.setProperty('--examMarks', 0);
+            document.querySelector('div[role="progressbar"]#exam-result').style.background = `radial-gradient(closest-side, white 80%, transparent 0 100%, white 0), conic-gradient(#1c64f2 0%, #def 0)`;
+            document.getElementById('overall-result').style.setProperty('--overallMarks', 0);
+            document.querySelector('div[role="progressbar"]#overall-result').style.background = `radial-gradient(closest-side, white 80%, transparent 0 100%, white 0), conic-gradient(#1c64f2 0%, #def 0)`;
         }
     }
 </script>
