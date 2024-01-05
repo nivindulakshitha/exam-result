@@ -31,7 +31,7 @@ div[role="progressbar"]#exam-result {
       transparent 0 100%,
       white 0
     ),
-    conic-gradient(var(--fg) calc(var(--ERPercentage) * 1%), var(--bg) 0);
+    conic-gradient(#1c64f2 0%, #def 0);
   font-family: "unMalithi", Arial, sans-serif;
   font-size: calc(var(--size) / 5);
   color: var(--fg);
@@ -75,7 +75,7 @@ div[role="progressbar"]#overall-result {
       transparent 0 100%,
       white 0
     ),
-    conic-gradient(var(--fg) calc(var(--ORPercentage) * 1%), var(--bg) 0);
+    conic-gradient(#1c64f2 0%, #def 0);
   font-family: "unMalithi", Arial, sans-serif;
   font-size: calc(var(--size) / 5);
   color: var(--fg);
@@ -129,5 +129,22 @@ body > div > div > div {
 
   body > div > div > div button {
     align-self: center;
+  }
+}
+
+.congratulations {
+  display: inline-block;
+  animation: congratulationsAnimation 1.5s ease infinite;
+}
+
+@keyframes congratulationsAnimation {
+  0% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
