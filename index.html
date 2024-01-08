@@ -2,221 +2,241 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>අධ්‍යන ප්‍රගති සංවර්ධන වැඩසටහන</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@pdftron/webviewer@10.6.0/webviewer.min.js"></script>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="Resources/paper.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="Resources/paper.ico" type="image/x-icon">
-    <meta property="og:title" content="අධ්‍යන ප්‍රගති සංවර්ධන වැඩසටහන | ශ්‍රී සුමංගල දහම් පාසල">
-    <meta property="og:description"
-        content="කුරුණෑගල පිඹුරුවැල්ලේගම ශ්‍රී සුමංගල තපෝවනාරාම විහාරස්ථ ශ්‍රී සුමංගල දහම් පාසල විසින් පවත්වනු ලබන පෙරහුරු විභාග සහ ශ්‍රේණි විභාග ප්‍රතිඵල නිකුත් කිර්‍රීමේ වෙබ් අඩවිය">
-    <meta property="og:image" content="Resources/Daham Pasala Logo.png">
-    <meta property="og:url" content="https://codingdesk-dev.github.io/exam-result/">
-    <meta property="og:type" content="website">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>අධ්‍යන ප්‍රගති සංවර්ධන වැඩසටහන</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@pdftron/webviewer@10.6.0/webviewer.min.js"></script>
+	<link rel="stylesheet" href="index.css">
+	<link rel="icon" href="Resources/paper.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="Resources/paper.ico" type="image/x-icon">
+	<meta property="og:title" content="අධ්‍යන ප්‍රගති සංවර්ධන වැඩසටහන | ශ්‍රී සුමංගල දහම් පාසල">
+	<meta property="og:description"
+		content="කුරුණෑගල පිඹුරුවැල්ලේගම ශ්‍රී සුමංගල තපෝවනාරාම විහාරස්ථ ශ්‍රී සුමංගල දහම් පාසල විසින් පවත්වනු ලබන පෙරහුරු විභාග සහ ශ්‍රේණි විභාග ප්‍රතිඵල නිකුත් කිර්‍රීමේ වෙබ් අඩවිය">
+	<meta property="og:image" content="Resources/Daham Pasala Logo.png">
+	<meta property="og:url" content="https://codingdesk-dev.github.io/exam-result/">
+	<meta property="og:type" content="website">
 
 </head>
 
 <style>
-    html,
-    body {
-        height: -webkit-fill-available;
-        width: -webkit-fill-available;
-        background-color: #f3f4f6;
-        font-family: "unMalithi", sans-serif;
-        font-size: larger;
-        line-height: unset !important;
-        font-size: 1.2em;
-        font-weight: 600;
-    }
+	html,
+	body {
+		height: -webkit-fill-available;
+		width: -webkit-fill-available;
+		background-color: #f3f4f6;
+		font-family: "unMalithi", sans-serif;
+		font-size: larger;
+		line-height: unset !important;
+		font-size: 1.2em;
+		font-weight: 600;
+	}
 
-    .cover {
-        width: 90%;
-        height: 90%;
-        background-color: #ffffff;
-        line-height: 1.2 !important;
-    }
+	.cover {
+		width: 90%;
+		height: 90%;
+		background-color: #ffffff;
+		line-height: 1.2 !important;
+	}
 
-    @font-face {
-        font-family: "unMalithi";
-        src: url("Resources/un-malithi.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-    }
+	@font-face {
+		font-family: "unMalithi";
+		src: url("Resources/un-malithi.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
 
-    @font-face {
-        font-family: "unGanganee";
-        src: url("Resources/un-ganganee.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-    }
+	@font-face {
+		font-family: "unGanganee";
+		src: url("Resources/un-ganganee.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+	}
 </style>
 
 <body class="flex flex-col justify-center justify-items-center items-center content-center">
-    <noscript>
-        <div class="h-full absolute z-10 top-0 left-0"
-            style="text-align: center; padding: 20px; background-color: #f2dede; color: #a94442;">
-            <p>This website requires JavaScript to function properly.</p>
-            <p>Please enable JavaScript in your browser settings.</p>
-        </div>
-    </noscript>
-    <div class="cover absolute justify-center justify-items-center items-center rounded-lg drop-shadow-md">
-        <div class="flex flex-col justify-center justify-items-center items-center content-center w-full"
-            style="border-right: 2px solid #ddd; border-radius: 2px">
-            <img src="Resources/Daham Pasala Logo.png" class="w-28" alt="" style="filter: blur(0.6px)" /><br />
-            <p class="text-center" style="font-family: 'unGanganee'; font-size: 1em; font-weight: 600">
-                ශ්‍රී සුමංගල තපෝවනාරාම විහාරස්ථ<br />ශ්‍රී සුමංගල දහම් පාසල<br />පිඹුරුවැල්ලේගම<br /><br /><span
-                    class="text-base font-semibold" style="font-family: 'unMalithi'; line-height: 1.5">අධ්‍යන ප්‍රගති
-                    සංවර්ධන වැඩසටහන
-                    <br />පෙරහුරු විභාග කටයුතු</span>
-            </p>
-        </div>
-        <div class="flex flex-col justify-start justify-items-start items-start content-start w-full p-10">
-            <p class="text-base">පරීක්ෂණ අංකය</p>
-            <select id="examinations" style="color: #1c64f2;"
-                class="bg-gray-50 border tracking-widest border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-1.5 mt-2"></select>
-            <p class="text-base mt-4 mb-4">විභාග අංකය</p>
-            <div class="w-full flex gap-5">
-                <input type="number" id="exam-index" style="color: #1c64f2;" inputmode="numeric" pattern="[0-9]*"
-                    min="230601" max="231040"
-                    class="w-2/4 tracking-widest border border-gray-300 text-gray-900 text-center text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block p-1.5 py-1.5" />
-                <button type="button" id="session-start"
-                    onclick="findIndex(document.getElementById('exam-index').value);"
-                    class="w-2/4 text-white bg-[#1c64f2] hover:bg-[#1446a9]/90 min-w-[120px] font-medium rounded-lg whitespace-nowrap text-sm px-3 py-1.5 text-center inline-flex items-center justify-center transition duration-300">
-                    තහවුරු කරන්න
-                </button>
-            </div>
-            <p class="text-base mt-4">අපේක්ෂකයාගේ නම</p>
-            <span id="candidate-name" class="text-sm font-normal text-left mt-2"
-                style="font-family: 'unMalithi'; line-height: 1; color: #fff;">text
-            </span>
-            <section class="w-full flex items-center place-content-around mt-6">
-                <div class="flex flex-col items-center">
-                    <div role="progressbar" id="exam-result" aria-valuemin="0" aria-valuemax="100"
-                        style="--examMarks:0">
-                    </div>
-                    <span class="text-base block mt-2">පරීක්ෂණය සදහා</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div role="progressbar" id="overall-result" aria-valuemin="0" aria-valuemax="100"
-                        style="--overallMarks:0">
-                    </div>
-                    <span class="text-base block mt-2">සාමාන්‍ය ලකුණු</span>
-                </div>
+	<noscript>
+		<div class="h-full absolute z-10 top-0 left-0"
+			style="text-align: center; padding: 20px; background-color: #f2dede; color: #a94442;">
+			<p>This website requires JavaScript to function properly.</p>
+			<p>Please enable JavaScript in your browser settings.</p>
+		</div>
+	</noscript>
+	<div class="cover absolute justify-center justify-items-center items-center rounded-lg drop-shadow-md">
+		<div class="flex flex-col justify-center justify-items-center items-center content-center w-full"
+			style="border-right: 2px solid #ddd; border-radius: 2px">
+			<img src="Resources/Daham Pasala Logo.png" class="w-28" alt="" style="filter: blur(0.6px)" /><br />
+			<p class="text-center" style="font-family: 'unGanganee'; font-size: 1em; font-weight: 600">
+				ශ්‍රී සුමංගල තපෝවනාරාම විහාරස්ථ<br />ශ්‍රී සුමංගල දහම් පාසල<br />පිඹුරුවැල්ලේගම<br /><br /><span
+					class="text-base font-semibold" style="font-family: 'unMalithi'; line-height: 1.5">අධ්‍යන ප්‍රගති
+					සංවර්ධන වැඩසටහන
+					<br />පෙරහුරු විභාග කටයුතු</span>
+			</p>
+		</div>
+		<div class="flex flex-col justify-start justify-items-start items-start content-start w-full p-10">
+			<p class="text-base">පරීක්ෂණ අංකය</p>
+			<select id="examinations" style="color: #1c64f2;"
+				class="bg-gray-50 border tracking-widest border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-1.5 mt-2"></select>
+			<p class="text-base mt-4 mb-4">විභාග අංකය</p>
+			<div class="w-full flex gap-5">
+				<input type="number" id="exam-index" style="color: #1c64f2;" inputmode="numeric" pattern="[0-9]*"
+					min="230601" max="231040"
+					class="w-2/4 tracking-widest border border-gray-300 text-gray-900 text-center text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block p-1.5 py-1.5" />
+				<button type="button" id="session-start"
+					onclick="findIndex(document.getElementById('exam-index').value);"
+					class="w-2/4 text-white bg-[#1c64f2] hover:bg-[#1446a9]/90 min-w-[120px] font-medium rounded-lg whitespace-nowrap text-sm px-3 py-1.5 text-center inline-flex items-center justify-center transition duration-300">
+					තහවුරු කරන්න
+				</button>
+			</div>
+			<p class="text-base mt-4" id="result-section">අපේක්ෂකයාගේ නම</p>
+			<span id="candidate-name" class="text-sm font-normal text-left mt-2"
+				style="font-family: 'unMalithi'; line-height: 1; color: #fff;">text
+			</span>
+			<section class="w-full flex items-center place-content-around mt-6">
+				<div class="flex flex-col items-center">
+					<div role="progressbar" id="exam-result" aria-valuemin="0" aria-valuemax="100"
+						style="--examMarks:0">
+					</div>
+					<span class="text-base block mt-2">පරීක්ෂණය සදහා</span>
+				</div>
+				<div class="flex flex-col items-center">
+					<div role="progressbar" id="overall-result" aria-valuemin="0" aria-valuemax="100"
+						style="--overallMarks:0">
+					</div>
+					<span class="text-base block mt-2">සාමාන්‍ය ලකුණු</span>
+				</div>
 
-                <p class="text-5xl font-black block text-center relative">
-                    <img id="congrats-image" class="absolute scale-150" style="visibility: hidden;"
-                        src="https://img1.picmix.com/output/stamp/normal/7/8/0/7/2107087_30c32.gif" alt="">
-                    <span id="candidate-position" style="color: #1c64f2;">00</span><span class="text-base block">වන
-                        ස්ථානය <span class="block text-4xl mt-2" id="scored-place"
-                            style="color: #fff;">text</span></span>
-                </p>
-            </section>
-        </div>
-    </div>
+				<p class="text-5xl font-black block text-center relative">
+					<img id="congrats-image" class="absolute scale-150"
+						style="visibility: hidden; transform: scale(1.5); top: 25%;"
+						src="https://img1.picmix.com/output/stamp/normal/7/8/0/7/2107087_30c32.gif" alt="">
+					<span id="candidate-position" style="color: #1c64f2;">00</span><span class="text-base block">වන
+						ස්ථානය <span class="block text-2xl mt-2" id="scored-place"
+							style="color: #fff;">text</span></span>
+				</p>
+			</section>
+		</div>
+	</div>
 </body>
 
 <script>
-    var jsonData = undefined;
-    document.addEventListener("DOMContentLoaded", () => {
-        document.querySelector("body > div > div > img").addEventListener('contextmenu', event => event.preventDefault());
-        const jsonFile = "result.json";
-        fetch(jsonFile)
-            .then(response => response.json())
-            .then(data => {
-                jsonData = data;
-                parseTests();
-            })
-            .catch(error => console.error('Error loading JSON data:', error));
-    })
+	var jsonData = undefined;
+	document.addEventListener("DOMContentLoaded", () => {
+		document.querySelector("body > div > div > img").addEventListener('contextmenu', event => event.preventDefault());
+		const jsonFile = "result.json";
+		fetch(jsonFile)
+			.then(response => response.json())
+			.then(data => {
+				jsonData = data;
+				parseTests();
+			})
+			.catch(error => console.error('Error loading JSON data:', error));
+	})
 
-    function parseTests() {
-        const filteredTests = jsonData[1].filter(value => value !== null);
-        filteredTests.forEach(element => {
-            let option = document.createElement('option')
-            option.id = jsonData[1].indexOf(element);
-            option.value = element;
-            option.innerText = element;
+	document.getElementById("exam-index").addEventListener('keydown', function (event) {
+		if (event.key === 'Enter') {
+			findIndex(document.getElementById('exam-index').value);
+		}
+	});
 
-            document.getElementById("examinations").appendChild(option)
-            document.getElementById("examinations").selectedIndex = document.getElementById("examinations").options.length - 1;
-        });
-    }
+	function parseTests() {
+		const filteredTests = jsonData[1].filter(value => value !== null);
+		filteredTests.forEach(element => {
+			let option = document.createElement('option')
+			option.id = jsonData[1].indexOf(element);
+			option.value = element;
+			option.innerText = element;
 
-    function findIndex(enteredIndex) {
-        for (var x = 2; x < 202; x++) {
-            let examIndex = jsonData[x][1];
-            if (examIndex != null && examIndex == enteredIndex) {
-                document.getElementById("candidate-name").style.color = "#1c64f2";
-                document.getElementById("candidate-name").innerText = jsonData[x][3];
-                var result = jsonData[x][document.querySelector("#examinations").selectedOptions[0].id];
-                var overall = jsonData[x][58];
-                var position = jsonData[x][59];
-                console.log(result, overall, position);
+			document.getElementById("examinations").appendChild(option)
+			document.getElementById("examinations").selectedIndex = document.getElementById("examinations").options.length - 1;
+		});
+	}
 
-                let progressBar = document.getElementById('exam-result');
-                progressBar.style.setProperty('--examMarks', result);
+	function findIndex(enteredIndex) {
+		for (var x = 2; x < 202; x++) {
+			let examIndex = jsonData[x][1];
+			if (examIndex != null && examIndex == enteredIndex) {
+				document.getElementById("result-section").scrollIntoView({ behavior: 'smooth' });
+				document.getElementById("candidate-name").style.color = "#1c64f2";
+				document.getElementById("candidate-name").innerText = jsonData[x][3];
+				var result = jsonData[x][document.querySelector("#examinations").selectedOptions[0].id];
+				var overall = jsonData[x][58];
+				var position = jsonData[x][59];
 
-                var value = 0;
-                myInterval = setInterval(() => {
-                    if (value > result) {
-                        clearInterval(myInterval)
-                    }
-                    document.querySelector('div[role="progressbar"]#exam-result').style.background = `radial-gradient(closest-side, white 80%, transparent 0 100%, white 0), conic-gradient(#1c64f2 ${value}%, #def 0)`;
-                    value++;
-                }, 10)
+				let progressBar = document.getElementById('exam-result');
+				progressBar.style.setProperty('--examMarks', result);
 
-                progressBar = document.getElementById('overall-result');
-                progressBar.style.setProperty('--overallMarks', Math.floor(overall * 100));
+				var value = 0;
+				myInterval = setInterval(() => {
+					if (value > result) {
+						clearInterval(myInterval)
+					}
+					document.querySelector('div[role="progressbar"]#exam-result').style.background = `radial-gradient(closest-side, white 80%, transparent 0 100%, white 0), conic-gradient(#1c64f2 ${value}%, #def 0)`;
+					value++;
+				}, 10)
 
-                var overallValue = 0;
-                overallInterval = setInterval(() => {
-                    if (overallValue > overall * 100) {
-                        clearInterval(overallInterval)
-                    }
-                    document.querySelector('div[role="progressbar"]#overall-result').style.background = `radial-gradient(closest-side, white 80%, transparent 0 100%, white 0), conic-gradient(#1c64f2 ${overallValue}%, #def 0)`;
-                    overallValue++;
-                }, 10)
+				progressBar = document.getElementById('overall-result');
+				progressBar.style.setProperty('--overallMarks', Math.ceil(overall * 100));
 
-                document.getElementById("candidate-position").innerText = position < 10 ? '0' + position : '' + position;
-                if (position == 1) {
-                    document.getElementById("candidate-position").classList.add('congratulations');
-                    document.getElementById("scored-place").innerText = "🥇";
-                    document.getElementById("congrats-image").style.visibility = "visible";
-                } else if (position == 2) {
-                    document.getElementById("candidate-position").classList.add('congratulations');
-                    document.getElementById("scored-place").innerText = "🥈";
-                    document.getElementById("congrats-image").style.visibility = "visible";
-                } else if (position == 3) {
-                    document.getElementById("candidate-position").classList.add('congratulations');
-                    document.getElementById("scored-place").innerText = "🥉";
-                    document.getElementById("congrats-image").style.visibility = "visible";
-                } else {
-                    document.getElementById("candidate-position").classList.remove('congratulations');
-                    document.getElementById("scored-place").innerText = "😏";
-                    document.getElementById("congrats-image").style.visibility = "hidden";
-                }
+				var overallValue = 0;
+				overallInterval = setInterval(() => {
+					if (overallValue > overall * 100) {
+						clearInterval(overallInterval)
+					}
+					document.querySelector('div[role="progressbar"]#overall-result').style.background = `radial-gradient(closest-side, white 80%, transparent 0 100%, white 0), conic-gradient(#1c64f2 ${overallValue}%, #def 0)`;
+					overallValue++;
+				}, 10)
 
-                return;
-            }
+				document.getElementById("candidate-position").innerText = position < 10 ? '0' + position : '' + position;
+				if (position == 1) {
+					document.getElementById("candidate-position").classList.add('congratulations');
+					document.getElementById("scored-place").innerText = "⭐🥇⭐";
+					document.getElementById("congrats-image").style.visibility = "visible";
+				} else if (position == 2) {
+					document.getElementById("candidate-position").classList.add('congratulations');
+					document.getElementById("scored-place").innerText = "⭐🥈⭐";
+					document.getElementById("congrats-image").style.visibility = "visible";
+				} else if (position == 3) {
+					document.getElementById("candidate-position").classList.add('congratulations');
+					document.getElementById("scored-place").innerText = "⭐🥉⭐";
+					document.getElementById("congrats-image").style.visibility = "visible";
+				} else {
+					if (result >= 75) {
+						document.getElementById("candidate-position").classList.remove('congratulations');
+						document.getElementById("scored-place").innerText = "⭐⭐⭐";
+						document.getElementById("congrats-image").style.visibility = "hidden";
+					} else if (result >= 50) {
+						document.getElementById("candidate-position").classList.remove('congratulations');
+						document.getElementById("scored-place").innerText = "⭐⭐";
+						document.getElementById("congrats-image").style.visibility = "hidden";
+					} else if (result >= 35) {
+						document.getElementById("candidate-position").classList.remove('congratulations');
+						document.getElementById("scored-place").innerText = "⭐";
+						document.getElementById("congrats-image").style.visibility = "hidden";
+					} else {
+						document.getElementById("candidate-position").classList.remove('congratulations');
+						document.getElementById("scored-place").innerText = "😥";
+						document.getElementById("congrats-image").style.visibility = "hidden";
+					}
+				}
+				return;
+			}
 
-            document.getElementById("candidate-name").innerText = "ඇතුලත් කළ විභාග අංකය වැරදියි. නැවත පරීක්ෂා කර උත්සාහ කරන්න.";
-            document.getElementById("candidate-position").innerText = "00";
-            document.getElementById("candidate-name").style.color = "#F22B29";
-            document.getElementById("candidate-position").classList.remove('congratulations');
-            document.getElementById("scored-place").style.color = "#FFF";
-            document.getElementById("scored-place").innerText = "text";
-            document.getElementById("congrats-image").style.visibility = "hidden";
-            document.getElementById('exam-result').style.setProperty('--examMarks', 0);
-            document.querySelector('div[role="progressbar"]#exam-result').style.background = `radial-gradient(closest-side, white 80%, transparent 0 100%, white 0), conic-gradient(#1c64f2 0%, #def 0)`;
-            document.getElementById('overall-result').style.setProperty('--overallMarks', 0);
-            document.querySelector('div[role="progressbar"]#overall-result').style.background = `radial-gradient(closest-side, white 80%, transparent 0 100%, white 0), conic-gradient(#1c64f2 0%, #def 0)`;
-        }
-    }
+			document.getElementById("candidate-name").innerText = "ඇතුලත් කළ විභාග අංකය වැරදියි. නැවත පරීක්ෂා කර උත්සාහ කරන්න.";
+			document.getElementById("candidate-position").innerText = "00";
+			document.getElementById("candidate-name").style.color = "#F22B29";
+			document.getElementById("candidate-position").classList.remove('congratulations');
+			document.getElementById("scored-place").style.color = "#FFF";
+			document.getElementById("scored-place").innerText = "text";
+			document.getElementById("congrats-image").style.visibility = "hidden";
+			document.getElementById('exam-result').style.setProperty('--examMarks', 0);
+			document.querySelector('div[role="progressbar"]#exam-result').style.background = `radial-gradient(closest-side, white 80%, transparent 0 100%, white 0), conic-gradient(#1c64f2 0%, #def 0)`;
+			document.getElementById('overall-result').style.setProperty('--overallMarks', 0);
+			document.querySelector('div[role="progressbar"]#overall-result').style.background = `radial-gradient(closest-side, white 80%, transparent 0 100%, white 0), conic-gradient(#1c64f2 0%, #def 0)`;
+		}
+	}
 </script>
 
 </html>
